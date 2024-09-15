@@ -11,3 +11,9 @@ Route::get('/home', function () {
         'title' => 'home'
     ]);
 });
+
+Route::get('/blog', function () {
+    return view('blogs', [
+        'title' => 'blogs'
+    ]);
+});

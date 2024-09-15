@@ -31,10 +31,10 @@
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="/home" class="{{ request()->is('/home') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}}rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
-            <a href="/blog" class="{{ request()->is('/about') ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white"}}rounded-md px-3 py-2 text-sm font-medium">About</a>
-            <a href="#" class="{{ request()->is('/blog') ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white"}}rounded-md px-3 py-2 text-sm font-medium">Blog</a>
-            <a href="#" class="{{ request()->is('/project') ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white"}}rounded-md px-3 py-2 text-sm font-medium">Projects</a>
+            <x-nav-link href="/home" :active="request()->is('home')" >Home</x-nav-link>
+            <x-nav-link href="/about" :active="request()->is('about')" >About</x-nav-link>
+            <x-nav-link href="/blog" :active="request()->is('blog')" >Blogs</x-nav-link>
+            
           </div>
         </div>
       </div>
