@@ -11,14 +11,23 @@ class blogCard extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
-    {
-        //
+    public function __construct(
+        public $title,
+        public $author,
+        public $body
+    ) {
+        $this->title = $title;
+        $this->author = $author;
+        $this->body = $body;
     }
 
     /**
      * Get the view / contents that represent the component.
      */
+    public function getTitle(){
+        
+    }
+    
     public function render(): View|Closure|string
     {
         return view('components.blog-card');
