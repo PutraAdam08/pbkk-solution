@@ -69,3 +69,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ### Weeks 2 Add view data
 ![BlogPages](image.png)
+
+### Weeks 4 Add post view and database integration
+![alt text](image-1.png)
