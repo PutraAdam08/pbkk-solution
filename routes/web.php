@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Post;
 
 Route::get('/', function () {
     return view('welcome');
@@ -15,18 +16,13 @@ Route::get('/home', function () {
 Route::get('/blog', function () {
     return view('blogs', [
         'title' => 'blogs',
-        'posts' => [
-            [
-            'title' => 'judul 1',
-            'author' => 'Adam',
-            'body' => 'Lorem ipsum dolor sit amet'
-            ],
-            [
-            'title' => 'judul 2',
-            'author' => 'Budi',
-            'body' => 'Lorem ipsum dolor sit amet'
-            ]
+        'posts' => Post::all()
+    ]);
+});
 
-        ]
+Route::get('/blog/{post:slug}', function (Post $post) {
+    return view('blog', [
+        'title' => 'blog',
+        'post' => $post
     ]);
 });

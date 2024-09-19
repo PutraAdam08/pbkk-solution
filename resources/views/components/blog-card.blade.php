@@ -1,7 +1,7 @@
 <div>
     <article class="flex max-w-xl flex-col items-start justify-between">
         <div class="flex items-center gap-x-4 text-xs">
-          <time datetime="2020-03-16" class="text-violet-300">Mar 16, 2020</time>
+          <time datetime="2020-03-16" class="text-violet-300">{{ $date }}</time>
           <!--<a href="#" class="relative z-10 rounded-full bg-violet-200 px-3 py-1.5 font-medium text-violet-500 hover:bg-violet-100">Marketing</a>-->
         </div>
         <div class="group relative">

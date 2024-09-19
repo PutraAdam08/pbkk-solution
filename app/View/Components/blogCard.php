@@ -14,11 +14,13 @@ class blogCard extends Component
     public function __construct(
         public $title,
         public $author,
-        public $body
+        public $body,
+        public $date
     ) {
         $this->title = $title;
         $this->author = $author;
         $this->body = $body;
+        $this->date = $date;
     }
 
     /**
