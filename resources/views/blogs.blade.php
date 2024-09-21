@@ -11,7 +11,7 @@
             <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-violet-300 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
                 @foreach ($posts as $post)
 
-                    <x-blog-card :title="$post->title" :author="$post->author" :body="$post->body" :date="$post->created_at->diffForHumans()"></x-blog-card>
+                    <x-blog-card :title="$post->title" :author="$post->author->name" :body="$post->body" :date="$post->created_at->diffForHumans()"></x-blog-card>
                 
                 @endforeach
             </div>

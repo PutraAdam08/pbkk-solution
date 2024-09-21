@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
+use App\Models\User;
 
 class Post extends Model
 {
@@ -22,8 +23,12 @@ class Post extends Model
         return[
             'title' => fake()->sentence(),
             'slug' => str::slug(fake()->sentence()),
-            'author' => fake()->name(),
+            'author_id' => User::factory(),
             'body' => fake()->text()
         ];
+    }
+
+    public function author(): BelongsTo{
+        return $this->belongsTo(User::class);
     }
 }
