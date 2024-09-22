@@ -15,12 +15,14 @@ class blogCard extends Component
         public $title,
         public $author,
         public $body,
-        public $date
+        public $date,
+        public $category
     ) {
         $this->title = $title;
         $this->author = $author;
         $this->body = $body;
         $this->date = $date;
+        $this->category = $category;
     }
 
     /**

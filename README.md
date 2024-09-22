@@ -72,3 +72,10 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ### Weeks 4 Add post view and database integration
 ![alt text](image-1.png)
+
+### Weeks 5 Add relational, factories, and seeder.
+![alt text](image-2.png)
+Add filter by user using eloquent relational
+
+![alt text](image-3.png)
+Add filter by category using eloquent relational

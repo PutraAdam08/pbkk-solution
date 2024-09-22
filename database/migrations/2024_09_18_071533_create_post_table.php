@@ -11,6 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
+        Schema::create('categories', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('slug')->unique();
+            $table->timestamps();
+        });
+
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
@@ -18,6 +25,10 @@ return new class extends Migration
             $table->foreignId('author_id')->constrained(
                 table: 'users',
                 indexName: 'posts_user_id'
+            );
+            $table->foreignId('category_id')->constrained(
+                table: 'categories',
+                indexName: 'post_category_id'
             );
             $table->text('body');
             $table->timestamps();
