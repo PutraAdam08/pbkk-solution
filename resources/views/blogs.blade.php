@@ -30,6 +30,9 @@
                 
                 @endforeach
             </div>
+            <div class="mt-12">
+                {{$posts->links()}}
+            </div>
         </div>
     </div>
 </x-layout>

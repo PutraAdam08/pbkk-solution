@@ -23,7 +23,7 @@ Route::get('/blog', function () {
     $posts = Post::filter(request(['search', 'category']))->latest();
     return view('blogs', [
         'title' => 'blogs',
-        'posts' => $posts->get()
+        'posts' => $posts->paginate(5)
     ]);
 });
 
