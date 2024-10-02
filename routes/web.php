@@ -15,10 +15,15 @@ Route::get('/home', function () {
     ]);
 });
 
+Route::get('/test', function () {
+    return view('test');
+});
+
 Route::get('/blog', function () {
+    $posts = Post::filter(request(['search', 'category']))->latest();
     return view('blogs', [
         'title' => 'blogs',
-        'posts' => Post::all()
+        'posts' => $posts->get()
     ]);
 });
 

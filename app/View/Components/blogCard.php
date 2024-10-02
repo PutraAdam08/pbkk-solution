@@ -16,13 +16,17 @@ class blogCard extends Component
         public $author,
         public $body,
         public $date,
-        public $category
+        public $category,
+        public $slug,
+        public $catSlug
     ) {
         $this->title = $title;
         $this->author = $author;
         $this->body = $body;
         $this->date = $date;
         $this->category = $category;
+        $this->slug = $slug;
+        $this->catSlug = $catSlug;
     }
 
     /**

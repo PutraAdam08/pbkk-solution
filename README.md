@@ -79,3 +79,8 @@ Add filter by user using eloquent relational
 
 ![alt text](image-3.png)
 Add filter by category using eloquent relational
+
+## Weeks 6 Update the ui and include search
+![alt text](image-4.png)
+
+![alt text](image-5.png)
